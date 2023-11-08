@@ -6,7 +6,7 @@ region = "ap-southeast-1"
 resource "aws_instance" "one" {
   ami             = "ami-0ebcd68de1afe59cd"
   instance_type   = "t2.micro"
-  key_name        = "Jaanu123"
+  key_name        = "jaanuabc"
   vpc_security_group_ids = [aws_security_group.five.id]
   availability_zone = "ap-southeast-1a"
   user_data       = <<EOF
@@ -25,7 +25,7 @@ EOF
 resource "aws_instance" "two" {
   ami             = "ami-06018068a18569ff2"
   instance_type   = "t2.micro"
-  key_name        = "Jaanu123"
+  key_name        = "jaanuabc"
   vpc_security_group_ids = [aws_security_group.five.id]
   availability_zone = "ap-southeast-1b"
   user_data       = <<EOF
@@ -44,7 +44,7 @@ EOF
 resource "aws_instance" "three" {
   ami             = "ami-06018068a18569ff2"
   instance_type   = "t2.micro"
-  key_name        = "Jaanu123"
+  key_name        = "jaanuabc"
   vpc_security_group_ids = [aws_security_group.five.id]
   availability_zone = "ap-southeast-1a"
   tags = {
@@ -55,7 +55,7 @@ resource "aws_instance" "three" {
 resource "aws_instance" "four" {
   ami             = "ami-06018068a18569ff2"
   instance_type   = "t2.micro"
-  key_name        = "Jaanu123"
+  key_name        = "jaanuabc"
   vpc_security_group_ids = [aws_security_group.five.id]
   availability_zone = "ap-southeast-1b"
   tags = {
@@ -88,7 +88,7 @@ resource "aws_security_group" "five" {
 }
 
 resource "aws_s3_bucket" "six" {
-  bucket = "Jaanu2277terraserverbucket"
+  bucket = "jaanu2277-terraserverbucket"
 }
 
 resource "aws_iam_user" "seven" {
@@ -99,7 +99,7 @@ name = each.value
 variable "user_names" {
 description = "*"
 type = set(string)
-default = ["user1", "user2", "user3", "user4"]
+default = ["user5", "user6", "user7", "user8"]
 }
 
 resource "aws_ebs_volume" "eight" {
