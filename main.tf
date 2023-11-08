@@ -1,14 +1,14 @@
 
 provider "aws" {
-region = "ap-south-1"
+region = "ap-southeast-1"
 }
 
 resource "aws_instance" "one" {
-  ami             = "ami-043c9d5df78f66d92"
+  ami             = "ami-06018068a18569ff2"
   instance_type   = "t2.micro"
   key_name        = "rahamabc"
   vpc_security_group_ids = [aws_security_group.five.id]
-  availability_zone = "ap-south-1a"
+  availability_zone = "ap-southeast-1a"
   user_data       = <<EOF
 #!/bin/bash
 sudo -i
